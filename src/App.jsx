@@ -594,9 +594,9 @@ export default function App() {
             <p className="mt-2 text-sm sm:text-base">Location: {profile.location}</p>
 
             <div className="flex flex-col items-center gap-3 mt-8 sm:flex-row sm:items-start lg:mt-10">
-              <a href="#" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">Resume</a>
-              <a href="#" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">LinkedIn</a>
-              <a href="#" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">GitHub</a>
+              <a href="https://drive.google.com/file/d/1Rm7NYGo_KucI06UZW4WviCvbhEO73kt2/view?usp=drive_link" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">Resume</a>
+              <a href="https://linkedin.com/in/mathavan-s-01716b249" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">LinkedIn</a>
+              <a href="https://github.com/Mathavan208/" className="w-full px-4 py-2 text-sm text-center transition border rounded-md sm:w-auto text-white/90 border-white/10 hover:bg-white/10">GitHub</a>
             </div>
           </div>
         </section>
