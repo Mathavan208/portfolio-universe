@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts (for futuristic look) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b1020;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbars for cleaner galaxy look */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Galaxy glow background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(123, 97, 255, 0.08), transparent 40%),
+              radial-gradient(circle at 80% 60%, rgba(0, 200, 255, 0.06), transparent 40%),
+              radial-gradient(circle at 50% 90%, rgba(200, 0, 255, 0.04), transparent 40%);
+  z-index: -1;
+}
+
+/* Floating animation for galaxy cards */
+.galaxy-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  animation: float 6s ease-in-out infinite;
+}
+.galaxy-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(140, 100, 255, 0.3);
+}
+
+/* Orbit spin */
+@keyframes spinOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: spinOrbit 20s linear infinite;
+}
+
+/* Floating planet effect for tech stacks */
+.tech-planet {
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at 30% 20%, #ffffff33, transparent 25%), 
+              linear-gradient(135deg, #8B5CF6, #3B82F6);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tech-planet:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 60px rgba(110, 231, 183, 0.5);
+}
+
+/* Planet pulse animation */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.7); }
+}
+.pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+
+/* Star frame container */
+.star-wrap {
+  position: absolute;
+  inset: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* SVG star scales beyond the card to fully enclose content */
+.star-svg {
+  width: 130%;
+  height: 130%;
+  animation: star-rotate 12s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(147, 51, 234, 0.35))
+          drop-shadow(0 0 22px rgba(59, 130, 246, 0.25));
+}
+
+/* Stroke-only star so content is never obscured */
+.star-shape {
+  fill: transparent;
+  stroke: rgba(147, 51, 234, 0.65);
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+  animation: star-twinkle 2.8s ease-in-out infinite alternate;
+}
+
+/* High-contrast content layer */
+.galaxy-card .card-content {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* On hover: amplify glow and rotate slightly faster */
+.galaxy-card:hover .star-svg {
+  animation-duration: 9s;
+  filter: drop-shadow(0 0 16px rgba(147, 51, 234, 0.55))
+          drop-shadow(0 0 28px rgba(59, 130, 246, 0.45));
+}
+.galaxy-card:hover .star-shape {
+  stroke: rgba(147, 51, 234, 0.85);
+}
+
+/* Keyframes: continuous rotation + subtle twinkle */
+@keyframes star-rotate {
+  from { transform: rotate(0deg) }
+  to   { transform: rotate(360deg) }
+}
+@keyframes star-twinkle {
+  0%   { opacity: 0.75; filter: drop-shadow(0 0 10px rgba(147,51,234,0.25)); }
+  50%  { opacity: 1;    filter: drop-shadow(0 0 16px rgba(147,51,234,0.4)) drop-shadow(0 0 26px rgba(59,130,246,0.3)); }
+  100% { opacity: 0.8;  filter: drop-shadow(0 0 12px rgba(147,51,234,0.3)); }
+}
+
+/* Typography nudges for readability */
+.galaxy-card .card-content h4 { letter-spacing: 0.2px; }
+.galaxy-card .card-content p  { font-size: 0.92rem; line-height: 1.55; }
+@media (min-width: 640px) {
+  .galaxy-card .card-content p { font-size: 1rem; }
+}
