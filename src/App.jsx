@@ -16,7 +16,7 @@ export default function App() {
   const profile = {
     name: "Mathavan",
     title: "Fullstack / MERN Developer",
-    bio: "I build immersive web experiences using React, Tailwind and creative animation.",
+    bio: "I build immersive fullstack web applications with a focus on seamless user experiences and robust backend solutions.",
     email: "maddymathavan209@example.com",
     location: "India",
     avatar: "/profile.jpg", // <-- replace with your image path
@@ -129,13 +129,97 @@ export default function App() {
         {
           id: 3,
           name: 'javascript',
-          path: '/assets/typescript.png',
+          path: '/images/javascript.png',
         },
         {
           id: 4,
           name: 'Framer Motion',
           path: '/assets/framer.png',
         },
+      ],
+    },
+    {
+      title: 'Coding Assessment Platform',
+      desc: 'A platform for coding assessments and interviews using React JS and Tailwind CSS and firebase for backend',
+      subdesc: 'User friendly website for coding assessments',
+      href: 'https://coding-assessment-bqdp.onrender.com/',
+      image:'/images/coding.png',
+      texture: '/textures/project/project3.mp4',
+      logo: '/images/coding.png',
+      logoStyle: {
+       
+        border: '0.2px solid rgba(208, 213, 221, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      },
+      spotlight: '/assets/spotlight3.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: '/assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'TailwindCSS',
+          path: 'assets/tailwindcss.png',
+        },
+        {
+          id: 3,
+          name: 'javascript',
+          path: '/images/javascript.png',
+        },
+        {
+          id: 4,
+          name: 'Framer Motion',
+          path: '/assets/framer.png',
+        },
+         {
+          id: 5,
+          name: 'Firebase firestore',
+          path: '/assets/firebase-logo.png',
+        }
+      ],
+    },
+    {
+      title: 'React Challenges Platform',
+      desc: 'A platform for frontend challenges for react and interviews using React JS and Tailwind CSS and firebase for backend',
+      subdesc: 'User friendly website for frontend challenges',
+      href: 'https://react-assessment-x54l.onrender.com/',
+      image:'/images/coding-2.png',
+      texture: '/textures/project/project3.mp4',
+      logo: '/images/coding-2.png',
+      logoStyle: {
+       
+        border: '0.2px solid rgba(208, 213, 221, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      },
+      spotlight: '/assets/spotlight3.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: '/assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'TailwindCSS',
+          path: 'assets/tailwindcss.png',
+        },
+        {
+          id: 3,
+          name: 'javascript',
+          path: '/images/javascript.png',
+        },
+        {
+          id: 4,
+          name: 'Framer Motion',
+          path: '/assets/framer.png',
+        },
+         {
+          id: 5,
+          name: 'Firebase firestore',
+          path: '/assets/firebase-logo.png',
+        }
       ],
     },
   ];
@@ -347,7 +431,7 @@ export default function App() {
         <section className="px-4 pb-16 sm:px-6 lg:px-20 sm:pb-20 lg:pb-24">
           <div className="max-w-4xl mx-auto text-center sm:text-left">
             <h2 className="text-3xl font-extrabold leading-tight text-transparent sm:text-4xl lg:text-5xl xl:text-6xl bg-clip-text bg-gradient-to-r from-white to-purple-300">
-              Building immersive web experiences
+              A aspiring Fullstack Developer crafting stellar web experiences.
             </h2>
             <p className="max-w-2xl mt-4 text-sm sm:mt-6 text-white/90 sm:text-base">{profile.bio}</p>
 
